@@ -38,13 +38,15 @@ public class Testy<publis> {
     static int bno = 0;
     static int bpn = 0;
     static int b = 0;
+   // static int conc = 0;
 
     static int memory;
 
-    public static void wszystkieTesty(){poziome(); pionowe(); pola(); finalTest();}
+    public static void wszystkieTesty(int conc){poziome(conc); pionowe(conc); pola(conc); finalTest(conc);}
 
     //Test lini poziomych, sprawdzenie czy w koażdej z tablic nie piowela sie dana wartość
-    public  static void poziome() {
+    public  static void poziome(int conc) {
+
 
 
         // X1o
@@ -61,8 +63,13 @@ public class Testy<publis> {
             if (Tab.X1o[7] == Tab.X1o[i] && Tab.X1o[7] != 0 && i!=7) {b1o=1;}
             if (Tab.X1o[8] == Tab.X1o[i] && Tab.X1o[8] != 0 && i!=8) {b1o=1;}
         }
-        if (b1o==1)
-            System.out.println("bład w 1 wierszu");
+
+        if(conc ==1) {
+
+            if (b1o == 1)
+                System.out.println("bład w 1 wierszu");
+
+        }
 
         // X2o
 
@@ -78,9 +85,11 @@ public class Testy<publis> {
             if (Tab.X2o[7] == Tab.X2o[i] && Tab.X2o[7] != 0 && i!=7) {b2o=1;}
             if (Tab.X2o[8] == Tab.X2o[i] && Tab.X2o[8] != 0 && i!=8) {b2o=1;}
         }
-        if (b2o==1)
-            System.out.println("bład w 2 wierszu");
 
+        if(conc ==1) {
+            if (b2o == 1)
+                System.out.println("bład w 2 wierszu");
+        }
 
         // X3o
 
@@ -96,9 +105,10 @@ public class Testy<publis> {
             if (Tab.X3o[7] == Tab.X3o[i] && Tab.X3o[7] != 0 && i!=7) {b3o=1;}
             if (Tab.X3o[8] == Tab.X3o[i] && Tab.X3o[8] != 0 && i!=8) {b3o=1;}
         }
-        if (b3o==1)
-            System.out.println("bład w 3 wierszu");
-
+        if(conc ==1) {
+            if (b3o == 1)
+                System.out.println("bład w 3 wierszu");
+        }
         // X4o
 
         for ( int i = 0; i <9 ; i++){
@@ -113,8 +123,10 @@ public class Testy<publis> {
             if (Tab.X4o[7] == Tab.X4o[i] && Tab.X4o[7] != 0 && i!=7) {b4o=1;}
             if (Tab.X4o[8] == Tab.X4o[i] && Tab.X4o[8] != 0 && i!=8) {b4o=1;}
         }
-        if (b4o==1) System.out.println("bład w 4 wierszu");
-
+        if(conc ==1) {
+            if (b4o == 1)
+                System.out.println("bład w 4 wierszu");
+        }
 
         // X5o
 
@@ -130,9 +142,10 @@ public class Testy<publis> {
             if (Tab.X5o[7] == Tab.X5o[i] && Tab.X5o[7] != 0 && i!=7) {b5o=1;}
             if (Tab.X5o[8] == Tab.X5o[i] && Tab.X5o[8] != 0 && i!=8) {b5o=1;}
         }
-        if (b5o==1)
-            System.out.println("bład w 5 wierszu");
-
+        if(conc ==1) {
+            if (b5o == 1)
+                System.out.println("bład w 5 wierszu");
+        }
 
         // X6o
 
@@ -148,9 +161,10 @@ public class Testy<publis> {
             if (Tab.X6o[7] == Tab.X6o[i] && Tab.X6o[7] != 0 && i!=7) {b6o=1;}
             if (Tab.X6o[8] == Tab.X6o[i] && Tab.X6o[8] != 0 && i!=8) {b6o=1;}
         }
-        if (b6o==1)
-            System.out.println("bład w 6 wierszu");
-
+        if(conc ==1) {
+            if (b6o == 1)
+                System.out.println("bład w 6 wierszu");
+        }
         // X7o
 
         for ( int i = 0; i <9 ; i++){
@@ -165,9 +179,10 @@ public class Testy<publis> {
             if (Tab.X7o[7] == Tab.X7o[i] && Tab.X7o[7] != 0 && i!=7) {b7o=1;}
             if (Tab.X7o[8] == Tab.X7o[i] && Tab.X7o[8] != 0 && i!=8) {b7o=1;}
         }
-        if (b7o==1)
-            System.out.println("bład w 7 wierszu");
-
+        if(conc ==1) {
+            if (b7o == 1)
+                System.out.println("bład w 7 wierszu");
+        }
 
         // X8o
 
@@ -183,9 +198,10 @@ public class Testy<publis> {
             if (Tab.X8o[7] == Tab.X8o[i] && Tab.X8o[7] != 0 && i!=7) {b8o=1;}
             if (Tab.X8o[8] == Tab.X8o[i] && Tab.X8o[8] != 0 && i!=8) {b8o=1;}
         }
-        if (b8o==1)
-            System.out.println("bład w 8 wierszu");
-
+        if(conc ==1) {
+            if (b8o==1)
+                System.out.println("bład w 8 wierszu");
+        }
 
 
         // X9o
@@ -202,8 +218,10 @@ public class Testy<publis> {
             if (Tab.X9o[7] == Tab.X9o[i] && Tab.X9o[7] != 0 && i!=7) {b9o=1;}
             if (Tab.X9o[8] == Tab.X9o[i] && Tab.X9o[8] != 0 && i!=8) {b9o=1;}
         }
-        if (b9o==1)
-            System.out.println("bład w 9 wierszu");
+        if(conc ==1) {
+            if (b9o==1)
+                System.out.println("bład w 9 wierszu");
+        }
 
         if (b1o + b2o + b3o + b4o + b5o + b6o + b7o + b8o + b9o == 0) {
             bno = 0;
@@ -214,7 +232,7 @@ public class Testy<publis> {
     }
 
     //Test lini pionowych, sprawdzenie czy w koażdej z tablic nie piowela sie dana wartość
-    public  static void pionowe() {
+    public  static void pionowe(int conc) {
 
 
         // Xo1
@@ -249,9 +267,11 @@ public class Testy<publis> {
                 bo1 = 1;
             }
         }
+        if(conc == 1) {
+
             if (bo1 == 1)
                 System.out.println("bład w 1 kolumnie");
-
+        }
         // Xo2
 
         for (int i = 0; i < 9; i++) {
@@ -284,8 +304,10 @@ public class Testy<publis> {
                 bo2 = 1;
             }
         }
-        if (bo2 == 1)
-            System.out.println("bład w 2 kolimnie");
+        if(conc == 1) {
+            if (bo2 == 1)
+                System.out.println("bład w 2 kolimnie");
+        }
 
 
         // Xo3
@@ -320,8 +342,10 @@ public class Testy<publis> {
                 bo3 = 1;
             }
         }
-        if (bo3 == 1)
-            System.out.println("bład w 3 kolimnie");
+        if(conc == 1) {
+            if (bo3 == 1)
+                System.out.println("bład w 3 kolimnie");
+        }
 
         // X4o
 
@@ -355,7 +379,9 @@ public class Testy<publis> {
                 bo4 = 1;
             }
         }
-        if (bo4 == 1) System.out.println("bład w 4 kolumnie");
+        if(conc == 1) {
+            if (bo4 == 1) System.out.println("bład w 4 kolumnie");
+        }
 
 
         // Xo5
@@ -389,8 +415,10 @@ public class Testy<publis> {
                 bo5 = 1;
             }
         }
-        if (bo5 == 1)
-            System.out.println("bład w 5 kolumnie");
+        if(conc == 1) {
+            if (bo5 == 1)
+                System.out.println("bład w 5 kolumnie");
+        }
 
 
         // Xo6
@@ -425,8 +453,10 @@ public class Testy<publis> {
                 bo6 = 1;
             }
         }
-        if (bo6 == 1)
-            System.out.println("bład w 6 kolumnie");
+        if(conc == 1) {
+            if (bo6 == 1)
+                System.out.println("bład w 6 kolumnie");
+        }
 
         // Xo7
 
@@ -459,8 +489,10 @@ public class Testy<publis> {
                 bo7 = 1;
             }
         }
-        if (bo7 == 1)
-            System.out.println("bład w 7 kolumnie");
+        if(conc == 1) {
+            if (bo7 == 1)
+                System.out.println("bład w 7 kolumnie");
+        }
 
 
         // Xo8
@@ -495,8 +527,10 @@ public class Testy<publis> {
             }
 
         }
-        if (bo8 == 1)
-            System.out.println("bład w 8 kolumnie");
+        if(conc == 1) {
+            if (bo8 == 1)
+                System.out.println("bład w 8 kolumnie");
+        }
 
 
         // Xo9
@@ -513,8 +547,10 @@ public class Testy<publis> {
             if (Tab.Xo9[7] == Tab.Xo9[i] && Tab.Xo9[7] != 0 && i != 7) { bo9 = 1; }
             if (Tab.Xo9[8] == Tab.Xo9[i] && Tab.Xo9[8] != 0 && i != 8) { bo9 = 1;}
         }
-        if (bo9 == 1)
-            System.out.println("bład w 9 kolumnie");
+        if(conc == 1) {
+            if (bo9 == 1)
+                System.out.println("bład w 9 kolumnie");
+        }
         //end poziome
 
 
@@ -525,7 +561,7 @@ public class Testy<publis> {
     }
 
     //Test pól, sprawdzenie czy w koażdej z tablic nie piowela sie dana wartość
-    public static void pola(){
+    public static void pola(int conc){
 
 
 
@@ -543,8 +579,10 @@ public class Testy<publis> {
             if (Tab.I[7] == Tab.I[i] && Tab.I[7] != 0 && i!=7) {bp1=1;}
             if (Tab.I[8] == Tab.I[i] && Tab.I[8] != 0 && i!=8) {bp1=1;}
         }
-        if (bp1==1)
-            System.out.println("bład w 1 polu");
+        if(conc == 1) {
+            if (bp1==1)
+                System.out.println("bład w 1 polu");
+        }
 
         // II
 
@@ -560,8 +598,10 @@ public class Testy<publis> {
             if (Tab.II[7] == Tab.II[i] && Tab.II[7] != 0 && i!=7) {bp2=1;}
             if (Tab.II[8] == Tab.II[i] && Tab.II[8] != 0 && i!=8) {bp2=1;}
         }
-        if (bp2==1)
-            System.out.println("bład w 2 polu");
+        if(conc == 1) {
+            if (bp2==1)
+                System.out.println("bład w 2 polu");
+        }
 
 
         // III
@@ -577,8 +617,10 @@ public class Testy<publis> {
             if (Tab.III[7] == Tab.III[i] && Tab.III[7] != 0 && i!=7) {bp3=1;}
             if (Tab.III[8] == Tab.III[i] && Tab.III[8] != 0 && i!=8) {bp3=1;}
         }
-        if (bp3==1)
-            System.out.println("bład w 3 polu");
+        if(conc == 1) {
+            if (bp3==1)
+                System.out.println("bład w 3 polu");
+        }
 
         // IV
 
@@ -593,7 +635,9 @@ public class Testy<publis> {
             if (Tab.IV[7] == Tab.IV[i] && Tab.IV[7] != 0 && i!=7) {bp4=1;}
             if (Tab.IV[8] == Tab.IV[i] && Tab.IV[8] != 0 && i!=8) {bp4=1;}
         }
-        if (bp4==1) System.out.println("bład w 4 polu");
+        if(conc == 1) {
+            if (bp4==1) System.out.println("bład w 4 polu");
+        }
 
 
         // V
@@ -610,8 +654,10 @@ public class Testy<publis> {
             if (Tab.V[7] == Tab.V[i] && Tab.V[7] != 0 && i!=7) {bp5=1;}
             if (Tab.V[8] == Tab.V[i] && Tab.V[8] != 0 && i!=8) {bp5=1;}
         }
-        if (bp5==1)
-            System.out.println("bład w 5 polu");
+        if(conc == 1) {
+            if (bp5==1)
+                System.out.println("bład w 5 polu");
+        }
 
 
         // VI
@@ -628,8 +674,10 @@ public class Testy<publis> {
             if (Tab.VI[7] == Tab.VI[i] && Tab.VI[7] != 0 && i!=7) {bp6=1;}
             if (Tab.VI[8] == Tab.VI[i] && Tab.VI[8] != 0 && i!=8) {bp6=1;}
         }
-        if (bp6==1)
-            System.out.println("bład w 6 polu");
+        if(conc == 1) {
+            if (bp6==1)
+                System.out.println("bład w 6 polu");
+        }
 
         // VII
 
@@ -645,8 +693,10 @@ public class Testy<publis> {
             if (Tab.VII[7] == Tab.VII[i] && Tab.VII[7] != 0 && i!=7) {bp7=1;}
             if (Tab.VII[8] == Tab.VII[i] && Tab.VII[8] != 0 && i!=8) {bp7=1;}
         }
-        if (bp7==1)
-            System.out.println("bład w 7 polu");
+        if(conc == 1) {
+            if (bp7==1)
+                System.out.println("bład w 7 polu");
+        }
 
 
         // VIII
@@ -663,8 +713,10 @@ public class Testy<publis> {
             if (Tab.VIII[7] == Tab.VIII[i] && Tab.VIII[7] != 0 && i!=7) {bp8=1;}
             if (Tab.VIII[8] == Tab.VIII[i] && Tab.VIII[8] != 0 && i!=8) {bp8=1;}
         }
-        if (bp8==1)
-            System.out.println("bład w 8 polu");
+        if(conc == 1) {
+            if (bp8==1)
+                System.out.println("bład w 8 polu");
+        }
 
 
 
@@ -682,8 +734,10 @@ public class Testy<publis> {
             if (Tab.IX[7] == Tab.IX[i] && Tab.IX[7] != 0 && i!=7) {bp9=1;}
             if (Tab.IX[8] == Tab.IX[i] && Tab.IX[8] != 0 && i!=8) {bp9=1;}
         }
-        if (bp9==1)
-            System.out.println("bład w 9 polu");
+        if(conc == 1) {
+            if (bp9==1)
+                System.out.println("bład w 9 polu");
+        }
 
         if (bp1 + bp2 + bp3 + bp4 + bp5 + bp6 + bp7 + bp8 + bp9 == 0) {
             bpn = 0;
@@ -693,8 +747,12 @@ public class Testy<publis> {
     }
 
     //Sprawdza czy jest jakiś bład.
-    public  static void finalTest(){ if (bon +bno+bpn==0){
-        b=0; System.out.println("Tablica nie zawiera błędów");} else b=1;  }
+    public  static void finalTest(int conc){ if (bon +bno+bpn==0){
+
+        b=0;
+        if(conc == 1) { System.out.println("Tablica nie zawiera błędów");};
+
+    } else b=1;  }
 
 
     public static void variables_B_To_0() {
@@ -738,7 +796,7 @@ public class Testy<publis> {
 
     }
 
-    public static void dzialaj(){
+    public static void dzialaj(int conc){
                 /*
                 bież pierwsze 0 z tablicy,
                  spróbuj 1 2, 3, 4, 5, 6, 7, 8, 9,
@@ -750,7 +808,7 @@ public class Testy<publis> {
         System.out.println("______________________________________");
         System.out.println("______________________________________");
 
-        for ( ; ; ) {
+        for (int z= 0 ; z<1 ;z++ ) {
 
 
             for (int i = 0; i < 9; i++) {
@@ -767,7 +825,8 @@ public class Testy<publis> {
                         bpn = 0;
                         b = 0;
 
-                        //  wszystkieTesty();
+                        //  wszystkieTesty(conc
+                        // );
 
                         Tab.X1o[i] = w;
 
@@ -776,18 +835,18 @@ public class Testy<publis> {
                         Tab.DataToTab_Xp(1, i + 1, w);
 
 
-                        Tab.PrintTab_from_Xno();
-                        wszystkieTesty();
+                        if(conc == 1) {Tab.PrintTab_from_Xno();}
+
+                        wszystkieTesty(conc);
 
                         Tab.DataToTab_Xno(1, i + 1, 0);
                         Tab.DataToTab_Xon(i + 1, 1, 0);
                         Tab.DataToTab_Xp(1, i + 1, 0);
-                        System.out.println(b + "....");
                         if (b == 0) {
                             memory = w;
                             ++posible;
                         }
-                        System.out.println("Posible : " + posible);
+                        //System.out.println("Posible : " + posible);
 
 
                         Testy.variables_B_To_0();
@@ -802,7 +861,8 @@ public class Testy<publis> {
                             bpn = 0;
                             b = 0;
 
-                            //  wszystkieTesty();
+                            //  wszystkieTesty(conc
+                            // );
 
                             Tab.X1o[i] = w;
 
@@ -811,13 +871,10 @@ public class Testy<publis> {
                             Tab.DataToTab_Xp(1, i + 1, w);
 
 
-                            Tab.PrintTab_from_Xno();
-                            wszystkieTesty();
+                           // if(conc == 1) {Tab.PrintTab_from_Xno();}
+                            wszystkieTesty(conc);
 
-//                    Tab.DataToTab_Xno(1, i+1, 0);
-//                    Tab.DataToTab_Xon(i+1,1, 0);
-//                    Tab.DataToTab_Xp(1,i+1, 0);
-                            System.out.println(b + "....");
+
                             if (b == 0) {
                                 break;
                             }
@@ -831,7 +888,7 @@ public class Testy<publis> {
                 }
 
 
-            }
+            }//1
             for (int i = 0; i < 9; i++) {
 
                 int posible = 0;
@@ -846,7 +903,8 @@ public class Testy<publis> {
                         bpn = 0;
                         b = 0;
 
-                        //  wszystkieTesty();
+                        //  wszystkieTesty(conc
+                        // );
 
                         Tab.X2o[i] = w;
 
@@ -855,18 +913,17 @@ public class Testy<publis> {
                         Tab.DataToTab_Xp(2, i + 1, w);
 
 
-                        Tab.PrintTab_from_Xno();
-                        wszystkieTesty();
+                       // if(conc == 1) {Tab.PrintTab_from_Xno();}
+                        wszystkieTesty(conc);
 
                         Tab.DataToTab_Xno(2, i + 1, 0);
                         Tab.DataToTab_Xon(i + 1, 2, 0);
                         Tab.DataToTab_Xp(2, i + 1, 0);
-                        System.out.println(b + "....");
                         if (b == 0) {
                             memory = w;
                             ++posible;
                         }
-                        System.out.println("Posible : " + posible);
+                        //System.out.println("Posible : " + posible);
 
 
                         Testy.variables_B_To_0();
@@ -881,7 +938,8 @@ public class Testy<publis> {
                             bpn = 0;
                             b = 0;
 
-                            //  wszystkieTesty();
+                            //  wszystkieTesty(conc
+                            // );
 
                             Tab.X2o[i] = w;
 
@@ -890,13 +948,9 @@ public class Testy<publis> {
                             Tab.DataToTab_Xp(1, i + 2, w);
 
 
-                            Tab.PrintTab_from_Xno();
-                            wszystkieTesty();
+                         //   if(conc == 1) {Tab.PrintTab_from_Xno();}
+                            wszystkieTesty(conc);
 
-//                    Tab.DataToTab_Xno(1, i+1, 0);
-//                    Tab.DataToTab_Xon(i+1,1, 0);
-//                    Tab.DataToTab_Xp(1,i+1, 0);
-                            System.out.println(b + "....");
                             if (b == 0) {
                                 break;
                             }
@@ -925,7 +979,8 @@ public class Testy<publis> {
                         bpn = 0;
                         b = 0;
 
-                        //  wszystkieTesty();
+                        //  wszystkieTesty(conc
+                        // );
 
                         Tab.X3o[i] = w;
 
@@ -934,18 +989,17 @@ public class Testy<publis> {
                         Tab.DataToTab_Xp(3, i + 1, w);
 
 
-                        Tab.PrintTab_from_Xno();
-                        wszystkieTesty();
+                      //  if(conc == 1) {Tab.PrintTab_from_Xno();}
+                        wszystkieTesty(conc);
 
                         Tab.DataToTab_Xno(3, i + 1, 0);
                         Tab.DataToTab_Xon(i + 1, 3, 0);
                         Tab.DataToTab_Xp(3, i + 1, 0);
-                        System.out.println(b + "....");
                         if (b == 0) {
                             memory = w;
                             ++posible;
                         }
-                        System.out.println("Posible : " + posible);
+                        //System.out.println("Posible : " + posible);
 
 
                         Testy.variables_B_To_0();
@@ -960,7 +1014,8 @@ public class Testy<publis> {
                             bpn = 0;
                             b = 0;
 
-                            //  wszystkieTesty();
+                            //  wszystkieTesty(conc
+                            // );
 
                             Tab.X3o[i] = w;
 
@@ -969,13 +1024,10 @@ public class Testy<publis> {
                             Tab.DataToTab_Xp(3, i + 1, w);
 
 
-                            Tab.PrintTab_from_Xno();
-                            wszystkieTesty();
+                          //  if(conc == 1) {Tab.PrintTab_from_Xno();}
+                            wszystkieTesty(conc);
 
-//                    Tab.DataToTab_Xno(1, i+1, 0);
-//                    Tab.DataToTab_Xon(i+1,1, 0);
-//                    Tab.DataToTab_Xp(1,i+1, 0);
-                            System.out.println(b + "....");
+//
                             if (b == 0) {
                                 break;
                             }
@@ -989,7 +1041,7 @@ public class Testy<publis> {
                 }
 
 
-            }
+            }//3
             for (int i = 0; i < 9; i++) {
 
                 int posible = 0;
@@ -1004,7 +1056,8 @@ public class Testy<publis> {
                         bpn = 0;
                         b = 0;
 
-                        //  wszystkieTesty();
+                        //  wszystkieTesty(conc
+                        // );
 
                         Tab.X4o[i] = w;
 
@@ -1013,18 +1066,17 @@ public class Testy<publis> {
                         Tab.DataToTab_Xp(4, i + 1, w);
 
 
-                        Tab.PrintTab_from_Xno();
-                        wszystkieTesty();
+                      //  if(conc == 1) {Tab.PrintTab_from_Xno();}
+                        wszystkieTesty(conc);
 
                         Tab.DataToTab_Xno(4, i + 1, 0);
                         Tab.DataToTab_Xon(i + 1, 4, 0);
                         Tab.DataToTab_Xp(4, i + 1, 0);
-                        System.out.println(b + "....");
                         if (b == 0) {
                             memory = w;
                             ++posible;
                         }
-                        System.out.println("Posible : " + posible);
+                        //System.out.println("Posible : " + posible);
 
 
                         Testy.variables_B_To_0();
@@ -1039,7 +1091,8 @@ public class Testy<publis> {
                             bpn = 0;
                             b = 0;
 
-                            //  wszystkieTesty();
+                            //  wszystkieTesty(conc
+                            // );
 
                             Tab.X4o[i] = w;
 
@@ -1048,13 +1101,9 @@ public class Testy<publis> {
                             Tab.DataToTab_Xp(4, i + 1, w);
 
 
-                            Tab.PrintTab_from_Xno();
-                            wszystkieTesty();
+                         //   if(conc == 1) {Tab.PrintTab_from_Xno();}
+                            wszystkieTesty(conc);
 
-//                    Tab.DataToTab_Xno(1, i+1, 0);
-//                    Tab.DataToTab_Xon(i+1,1, 0);
-//                    Tab.DataToTab_Xp(1,i+1, 0);
-                            System.out.println(b + "....");
                             if (b == 0) {
                                 break;
                             }
@@ -1068,7 +1117,7 @@ public class Testy<publis> {
                 }
 
 
-            }
+            }//4
             for (int i = 0; i < 9; i++) {
 
                 int posible = 0;
@@ -1083,7 +1132,8 @@ public class Testy<publis> {
                         bpn = 0;
                         b = 0;
 
-                        //  wszystkieTesty();
+                        //  wszystkieTesty(conc
+                        // );
 
                         Tab.X5o[i] = w;
 
@@ -1092,18 +1142,17 @@ public class Testy<publis> {
                         Tab.DataToTab_Xp(5, i + 1, w);
 
 
-                        Tab.PrintTab_from_Xno();
-                        wszystkieTesty();
+                      //  if(conc == 1) {Tab.PrintTab_from_Xno();}
+                        wszystkieTesty(conc);
 
                         Tab.DataToTab_Xno(5, i + 1, 0);
                         Tab.DataToTab_Xon(i + 1, 5, 0);
                         Tab.DataToTab_Xp(5, i + 1, 0);
-                        System.out.println(b + "....");
                         if (b == 0) {
                             memory = w;
                             ++posible;
                         }
-                        System.out.println("Posible : " + posible);
+                        //System.out.println("Posible : " + posible);
 
 
                         Testy.variables_B_To_0();
@@ -1118,7 +1167,8 @@ public class Testy<publis> {
                             bpn = 0;
                             b = 0;
 
-                            //  wszystkieTesty();
+                            //  wszystkieTesty(conc
+                            // );
 
                             Tab.X5o[i] = w;
 
@@ -1127,13 +1177,12 @@ public class Testy<publis> {
                             Tab.DataToTab_Xp(5, i + 1, w);
 
 
-                            Tab.PrintTab_from_Xno();
-                            wszystkieTesty();
+                      //      if(conc == 1) {Tab.PrintTab_from_Xno();}
+                            wszystkieTesty(conc);
 
 //                    Tab.DataToTab_Xno(1, i+1, 0);
 //                    Tab.DataToTab_Xon(i+1,1, 0);
 //                    Tab.DataToTab_Xp(1,i+1, 0);
-                            System.out.println(b + "....");
                             if (b == 0) {
                                 break;
                             }
@@ -1147,7 +1196,7 @@ public class Testy<publis> {
                 }
 
 
-            }
+            }//5
             for (int i = 0; i < 9; i++) {
 
                 int posible = 0;
@@ -1162,7 +1211,8 @@ public class Testy<publis> {
                         bpn = 0;
                         b = 0;
 
-                        //  wszystkieTesty();
+                        //  wszystkieTesty(conc
+                        // );
 
                         Tab.X6o[i] = w;
 
@@ -1171,18 +1221,17 @@ public class Testy<publis> {
                         Tab.DataToTab_Xp(6, i + 1, w);
 
 
-                        Tab.PrintTab_from_Xno();
-                        wszystkieTesty();
+                      //  if(conc == 1) {Tab.PrintTab_from_Xno();}
+                        wszystkieTesty(conc);
 
                         Tab.DataToTab_Xno(6, i + 1, 0);
                         Tab.DataToTab_Xon(i + 1, 6, 0);
                         Tab.DataToTab_Xp(6, i + 1, 0);
-                        System.out.println(b + "....");
                         if (b == 0) {
                             memory = w;
                             ++posible;
                         }
-                        System.out.println("Posible : " + posible);
+                        //System.out.println("Posible : " + posible);
 
 
                         Testy.variables_B_To_0();
@@ -1197,7 +1246,8 @@ public class Testy<publis> {
                             bpn = 0;
                             b = 0;
 
-                            //  wszystkieTesty();
+                            //  wszystkieTesty(conc
+                            // );
 
                             Tab.X6o[i] = w;
 
@@ -1206,13 +1256,12 @@ public class Testy<publis> {
                             Tab.DataToTab_Xp(6, i + 1, w);
 
 
-                            Tab.PrintTab_from_Xno();
-                            wszystkieTesty();
+                         //   if(conc == 1) {Tab.PrintTab_from_Xno();}
+                            wszystkieTesty(conc);
 
 //                    Tab.DataToTab_Xno(1, i+1, 0);
 //                    Tab.DataToTab_Xon(i+1,1, 0);
 //                    Tab.DataToTab_Xp(1,i+1, 0);
-                            System.out.println(b + "....");
                             if (b == 0) {
                                 break;
                             }
@@ -1226,7 +1275,7 @@ public class Testy<publis> {
                 }
 
 
-            }
+            }//6
             for (int i = 0; i < 9; i++) {
 
                 int posible = 0;
@@ -1241,7 +1290,8 @@ public class Testy<publis> {
                         bpn = 0;
                         b = 0;
 
-                        //  wszystkieTesty();
+                        //  wszystkieTesty(conc
+                        // );
 
                         Tab.X7o[i] = w;
 
@@ -1250,18 +1300,17 @@ public class Testy<publis> {
                         Tab.DataToTab_Xp(7, i + 1, w);
 
 
-                        Tab.PrintTab_from_Xno();
-                        wszystkieTesty();
+                       // if(conc == 1) {Tab.PrintTab_from_Xno();}
+                        wszystkieTesty(conc);
 
                         Tab.DataToTab_Xno(7, i + 1, 0);
                         Tab.DataToTab_Xon(i + 1, 7, 0);
                         Tab.DataToTab_Xp(7, i + 1, 0);
-                        System.out.println(b + "....");
                         if (b == 0) {
                             memory = w;
                             ++posible;
                         }
-                        System.out.println("Posible : " + posible);
+                        //System.out.println("Posible : " + posible);
 
 
                         Testy.variables_B_To_0();
@@ -1276,7 +1325,8 @@ public class Testy<publis> {
                             bpn = 0;
                             b = 0;
 
-                            //  wszystkieTesty();
+                            //  wszystkieTesty(conc
+                            // );
 
                             Tab.X7o[i] = w;
 
@@ -1285,13 +1335,12 @@ public class Testy<publis> {
                             Tab.DataToTab_Xp(7, i + 1, w);
 
 
-                            Tab.PrintTab_from_Xno();
-                            wszystkieTesty();
+                         //   if(conc == 1) {Tab.PrintTab_from_Xno();}
+                            wszystkieTesty(conc);
 
 //                    Tab.DataToTab_Xno(1, i+1, 0);
 //                    Tab.DataToTab_Xon(i+1,1, 0);
 //                    Tab.DataToTab_Xp(1,i+1, 0);
-                            System.out.println(b + "....");
                             if (b == 0) {
                                 break;
                             }
@@ -1305,7 +1354,7 @@ public class Testy<publis> {
                 }
 
 
-            }
+            }//7
             for (int i = 0; i < 9; i++) {
 
                 int posible = 0;
@@ -1320,7 +1369,8 @@ public class Testy<publis> {
                         bpn = 0;
                         b = 0;
 
-                        //  wszystkieTesty();
+                        //  wszystkieTesty(conc
+                        // );
 
                         Tab.X8o[i] = w;
 
@@ -1329,18 +1379,17 @@ public class Testy<publis> {
                         Tab.DataToTab_Xp(8, i + 1, w);
 
 
-                        Tab.PrintTab_from_Xno();
-                        wszystkieTesty();
+//                        if(conc == 1) {Tab.PrintTab_from_Xno();}
+                        wszystkieTesty(conc);
 
                         Tab.DataToTab_Xno(8, i + 1, 0);
                         Tab.DataToTab_Xon(i + 1, 8, 0);
                         Tab.DataToTab_Xp(8, i + 1, 0);
-                        System.out.println(b + "....");
                         if (b == 0) {
                             memory = w;
                             ++posible;
                         }
-                        System.out.println("Posible : " + posible);
+                        //System.out.println("Posible : " + posible);
 
 
                         Testy.variables_B_To_0();
@@ -1355,7 +1404,8 @@ public class Testy<publis> {
                             bpn = 0;
                             b = 0;
 
-                            //  wszystkieTesty();
+                            //  wszystkieTesty(conc
+                            // );
 
                             Tab.X8o[i] = w;
 
@@ -1364,13 +1414,12 @@ public class Testy<publis> {
                             Tab.DataToTab_Xp(8, i + 1, w);
 
 
-                            Tab.PrintTab_from_Xno();
-                            wszystkieTesty();
+//                            if(conc == 1) {Tab.PrintTab_from_Xno();}
+                            wszystkieTesty(conc);
 
 //                    Tab.DataToTab_Xno(1, i+1, 0);
 //                    Tab.DataToTab_Xon(i+1,1, 0);
 //                    Tab.DataToTab_Xp(1,i+1, 0);
-                            System.out.println(b + "....");
                             if (b == 0) {
                                 break;
                             }
@@ -1384,7 +1433,7 @@ public class Testy<publis> {
                 }
 
 
-            }
+            }//8
             for (int i = 0; i < 9; i++) {
 
                 int posible = 0;
@@ -1399,7 +1448,8 @@ public class Testy<publis> {
                         bpn = 0;
                         b = 0;
 
-                        //  wszystkieTesty();
+                        //  wszystkieTesty(conc
+                        // );
 
                         Tab.X9o[i] = w;
 
@@ -1408,18 +1458,17 @@ public class Testy<publis> {
                         Tab.DataToTab_Xp(9, i + 1, w);
 
 
-                        Tab.PrintTab_from_Xno();
-                        wszystkieTesty();
+//                        if(conc == 1) {Tab.PrintTab_from_Xno();}
+                        wszystkieTesty(conc);
 
                         Tab.DataToTab_Xno(9, i + 1, 0);
                         Tab.DataToTab_Xon(i + 1, 9, 0);
                         Tab.DataToTab_Xp(9, i + 1, 0);
-                        System.out.println(b + "....");
                         if (b == 0) {
                             memory = w;
                             ++posible;
                         }
-                        System.out.println("Posible : " + posible);
+                        //System.out.println("Posible : " + posible);
 
 
                         Testy.variables_B_To_0();
@@ -1434,7 +1483,8 @@ public class Testy<publis> {
                             bpn = 0;
                             b = 0;
 
-                            //  wszystkieTesty();
+                            //  wszystkieTesty(conc
+                            // );
 
                             Tab.X9o[i] = w;
 
@@ -1443,13 +1493,12 @@ public class Testy<publis> {
                             Tab.DataToTab_Xp(9, i + 1, w);
 
 
-                            Tab.PrintTab_from_Xno();
-                            wszystkieTesty();
+//                            if(conc == 1) {Tab.PrintTab_from_Xno();}
+                            wszystkieTesty(conc);
 
 //                    Tab.DataToTab_Xno(1, i+1, 0);
 //                    Tab.DataToTab_Xon(i+1,1, 0);
 //                    Tab.DataToTab_Xp(1,i+1, 0);
-                            System.out.println(b + "....");
                             if (b == 0) {
                                 break;
                             }
@@ -1463,15 +1512,13 @@ public class Testy<publis> {
                 }
 
 
-            }
+            }//9
 
 
 
        // if (b==0){break;}
         }
+        //if(conc == 1) {Tab.PrintTab_from_Xno();}
 
     }
 }
-
-
-

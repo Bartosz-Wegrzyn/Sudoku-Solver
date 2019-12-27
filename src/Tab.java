@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Tab {
+
+
     static int i = 0;
     private static String a = " ";
     //Linie poziome
@@ -27,6 +29,15 @@ public class Tab {
     public static int[] Xo8 = {X1o[7], X2o[7], X3o[7], X4o[7], X5o[7], X6o[7], X7o[7], X8o[7], X9o[7]};
     public static int[] Xo9 = {X1o[8], X2o[8], X3o[8], X4o[8], X5o[8], X6o[8], X7o[8], X8o[8], X9o[8]};
 
+    public static int[][] XN = {
+            {X1o[0], X2o[0], X3o[0], X4o[0], X5o[0], X6o[0], X7o[0], X8o[0], X9o[0]},
+            {X1o[1], X2o[1], X3o[1], X4o[1], X5o[1], X6o[1], X7o[1], X8o[1], X9o[1]},
+            {X1o[2], X2o[2], X3o[2], X4o[2], X5o[2], X6o[2], X7o[2], X8o[2], X9o[2]},
+            {X1o[3], X2o[3], X3o[3], X4o[3], X5o[3], X6o[3], X7o[3], X8o[3], X9o[3]},
+            {X1o[4], X2o[4], X3o[4], X4o[4], X5o[4], X6o[4], X7o[4], X8o[4], X9o[4]},
+            {X1o[5], X2o[5], X3o[5], X4o[5], X5o[5], X6o[5], X7o[5], X8o[5], X9o[5]},
+            {X1o[6], X2o[6], X3o[6], X4o[6], X5o[6], X6o[6], X7o[6], X8o[6], X9o[6]},
+            {X1o[8], X2o[8], X3o[8], X4o[8], X5o[8], X6o[8], X7o[8], X8o[8], X9o[8]}};
 //    //Pola
 //    ArrayList pola = new ArrayList(9);
 //    int pola[0] = [X1o[0], X1o[1], X1o[2], X2o[0], X2o[1], X2o[2], X3o[0], X3o[1], X3o[2],];
@@ -48,6 +59,37 @@ public class Tab {
     public static int[] VII =   {X7o[0], X7o[1], X7o[2], X8o[0], X8o[1], X8o[2], X9o[0], X9o[1], X9o[2],};
     public static int[] VIII =  {X7o[3], X7o[4], X7o[5], X8o[3], X8o[4], X8o[5], X9o[3], X9o[4], X9o[5],};
     public  static int[] IX =   {X7o[6], X7o[7], X7o[8], X8o[6], X8o[7], X8o[8], X9o[6], X9o[7], X9o[8],};
+
+   public static int Customxyw[][] = {{
+
+           119, 175, 181,
+           227, 258, 299,
+           315, 341, 369, 372, 387, 398,
+           412, 425, 467, 478, 491,
+           511, 555,
+           613, 659,
+           743, 751, 765, 784,
+           917, 921, 934, 952, 988,},{
+
+           111, 125, 130, 140, 154, 162, 170, 180, 196,
+           212, 227, 234, 245, 256, 260, 270, 281, 290,
+           310, 320, 336, 341, 350, 367, 374, 380, 392,
+           410, 421, 438, 440, 450, 460, 475, 484, 490,
+           510, 520, 533, 540, 555, 560, 570, 580, 590,
+           610, 626, 630, 644, 650, 663, 671, 689, 690,
+           710, 722, 730, 746, 750, 765, 779, 780, 790,
+           819, 828, 835, 840, 853, 860, 870, 886, 890,
+           910, 924, 930, 942, 951, 969, 978, 983, 990,}, {
+
+           116, 124, 130, 140, 153, 160, 170, 180, 197,
+           215, 220, 231, 240, 257, 260, 279, 280, 290,
+           310, 320, 330, 340, 350, 360, 370, 381, 390,
+           410, 420, 434, 449, 450, 468, 470, 486, 490,
+           510, 528, 530, 540, 550, 563, 570, 582, 590,
+           610, 620, 630, 644, 650, 660, 670, 680, 690,
+           714, 720, 730, 741, 755, 767, 770, 783, 790,
+           812, 820, 838, 843, 850, 860, 870, 884, 890,
+           917, 925, 930, 940, 950, 960, 970, 989, 996,}};
 
 
     //Drukowanie Tablic:
@@ -122,15 +164,15 @@ public class Tab {
             Xo8[ww] = 0;
             Xo9[ww] = 0;
 
-            I[ww] = 0;
-            II[ww] = 0;
-            III[ww] = 0;
-            IV[ww] = 0;
-            V[ww] = 0;
-            VI[ww] = 0;
-            VII[ww] = 0;
-            VIII[ww] = 0;
-            IX[ww] = 0;
+            I[ww] =     0;
+            II[ww] =    0;
+            III[ww] =   0;
+            IV[ww] =    0;
+            V[ww] =     0;
+            VI[ww] =    0;
+            VII[ww] =   0;
+            VIII[ww] =  0;
+            IX[ww] =    0;
 
             Testy.variables_B_To_0();
         }
@@ -177,7 +219,7 @@ public class Tab {
             PrintTab_from_Xno();
 //            System.out.println("Tab on:");
 //            PrintTab_from_Xno();
-            Testy.wszystkieTesty();
+            Testy.wszystkieTesty(0);
 
             x=0;
             y=0;
@@ -190,8 +232,8 @@ public class Tab {
         for (; ;) {
             System.out.println("--------------");
 
-            System.out.println("Wyjdź: 0");
-            System.out.println("Reset: 1");
+            System.out.println("Wyczyść: 1");
+            System.out.println("Zatwierdź: 0");
             System.out.println("Wprowadź swoje cyfry:");
 
             //  własne cyfry//
@@ -220,79 +262,34 @@ public class Tab {
             System.out.println(Xo3[1]);
             System.out.println(I[5]);
             System.out.println();
-                Testy.wszystkieTesty();
+                Testy.wszystkieTesty(1);
                 Testy.variables_B_To_0();
                 System.out.println();
                // PrintTab_from_Xon(); //tabon
         }
     }
 
-    public static void PreLoadedXYW() throws InterruptedException {
+    public static void PreLoadedXYW(int numer_Tablicy) throws InterruptedException {
 
-        // Sudoku wgrane wcześcniej
-//        int xyw[] = {};
-        int xyw[] = {
-
-//                119, 175, 181,
-//                227, 258, 299,
-//                315, 341, 369, 372, 387, 398,
-//                412, 425, 467, 478, 491,
-//                511, 555,
-//                613, 659,
-//                743, 751, 765, 784,
-//                917, 921, 934, 952, 988,
-
-
-//                111, 125, 130, 140, 154, 162, 170, 180, 196,
-//                212, 227, 234, 245, 256, 260, 270, 281, 290,
-//                310, 320, 336, 341, 350, 367, 374, 380, 392,
-//                410, 421, 438, 440, 450, 460, 475, 484, 490,
-//                510, 520, 533, 540, 555, 560, 570, 580, 590,
-//                610, 626, 630, 644, 650, 663, 671, 689, 690,
-//                710, 722, 730, 746, 750, 765, 779, 780, 790,
-//                819, 828, 835, 840, 853, 860, 870, 886, 890,
-//                910, 924, 930, 942, 951, 969, 978, 983, 990,
-
-                116, 124, 130, 140, 153, 160, 170, 180, 197,
-                215, 220, 231, 240, 257, 260, 279, 280, 290,
-                310, 320, 330, 340, 350, 360, 370, 381, 390,
-                410, 420, 434, 449, 450, 468, 470, 486, 490,
-                510, 528, 530, 540, 550, 563, 570, 582, 590,
-                610, 620, 630, 644, 650, 660, 670, 680, 690,
-                714, 720, 730, 741, 755, 767, 770, 783, 790,
-                812, 820, 838, 843, 850, 860, 870, 884, 890,
-                917, 925, 930, 940, 950, 960, 970, 989, 996,
-
-
-
-        };
-
-
-        int dl = xyw.length;
-
-
+        int dl = Customxyw[numer_Tablicy-1].length;
         for (int i =0; i<dl; i++) {
-            int x = Math.xyw_To_x(xyw[i]);
-            int y = Math.xyw_To_y(xyw[i]);
-            int w = Math.xyw_To_w(xyw[i]);
+            int x = Math.xyw_To_x(Customxyw[numer_Tablicy-1][i]);
+            int y = Math.xyw_To_y(Customxyw[numer_Tablicy-1][i]);
+            int w = Math.xyw_To_w(Customxyw[numer_Tablicy-1][i]);
             if(x<=0 || y<=0 || w < 0) {
                 System.out.println("x=" + x+"; y="+ y+ "; w="+ w);
                 System.out.println("błąd00");continue;}
-            System.out.println("Liczba "+ (i+1) + " = ["+ "x=" + x+"; y="+ y+ "; w="+ w + "]");
+           // System.out.println("Liczba "+ (i+1) + " = ["+ "x=" + x+"; y="+ y+ "; w="+ w + "]");
 
             DataToTab_Xno(x, y ,w);
             DataToTab_Xon(y, x ,w);
             DataToTab_Xp(x, y, w );
 
-            PrintTab_from_Xno();
-            Testy.wszystkieTesty();
+//            PrintTab_from_Xno();
+//            Testy.wszystkieTesty();
 
         }
-        System.out.println("___________________________________________");
-        System.out.println("___________________________________________");
-        System.out.println("___________________________________________");
-        System.out.println("___________________________________________");
-       // Testy.dzialaj();
+
     }
 
     //Wgrywanie pobranch liczb do tablic:
@@ -300,33 +297,45 @@ public class Tab {
     public static void DataToTab_Xno(int x, int y, int w){
 
         switch ((int) x) {
-            case 1:
+            case 1: {
                 X1o[(int) (y - 1)] = (int) w;
-                break;
-            case 2:
+            }
+            break;
+            case 2: {
                 X2o[(int) (y - 1)] = (int) w;
-                break;
-            case 3:
+              //  XN[1][(int) (y - 1)] = (int) w;
+            }
+            break;
+            case 3: {
                 X3o[(int) (y - 1)] = (int) w;
-                break;
-            case 4:
+            //    XN[2][(int) (y - 1)] = (int) w;
+            }
+            break;
+            case 4: {
                 X4o[(int) (y - 1)] = (int) w;
-                break;
-            case 5:
+              //  XN[3][(int) (y - 1)] = (int) w;
+            }
+            break;
+            case 5: {
                 X5o[(int) (y - 1)] = (int) w;
-                break;
-            case 6:
+               // XN[4][(int) (y - 1)] = (int) w;
+            }   break;
+            case 6: {
                 X6o[(int) (y - 1)] = (int) w;
-                break;
-            case 7:
+                //XN[5][(int) (y - 1)] = (int) w;
+            }   break;
+            case 7: {
                 X7o[(int) (y - 1)] = (int) w;
-                break;
-            case 8:
+                //XN[6][(int) (y - 1)] = (int) w;
+            }   break;
+            case 8: {
                 X8o[(int) (y - 1)] = (int) w;
-                break;
-            case 9:
+                //XN[7][(int) (y - 1)] = (int) w;
+            }   break;
+            case 9: {
                 X9o[(int) (y - 1)] = (int) w;
-                break;
+                //XN[8][(int) (y - 1)] = (int) w;
+            }   break;
         }
     }
 
@@ -335,30 +344,48 @@ public class Tab {
         switch ((int) x) {
             case 1:
                 Xo1[(int) (y - 1)] = (int) w;
+//                XN[0][(int) (y - 1)] = (int) w;
+
                 break;
             case 2:
                 Xo2[(int) (y - 1)] = (int) w;
+//                XN[1][(int) (y - 1)] = (int) w;
+
                 break;
             case 3:
                 Xo3[(int) (y - 1)] = (int) w;
+//                XN[2][(int) (y - 1)] = (int) w;
+
                 break;
             case 4:
                 Xo4[(int) (y - 1)] = (int) w;
+//                XN[3][(int) (y - 1)] = (int) w;
+
                 break;
             case 5:
                 Xo5[(int) (y - 1)] = (int) w;
+//                XN[4][(int) (y - 1)] = (int) w;
+
                 break;
             case 6:
                 Xo6[(int) (y - 1)] = (int) w;
+//                XN[5][(int) (y - 1)] = (int) w;
+
                 break;
             case 7:
                 Xo7[(int) (y - 1)] = (int) w;
+              //  XN[6][(int) (y - 1)] = (int) w;
+
                 break;
             case 8:
                 Xo8[(int) (y - 1)] = (int) w;
+              //  XN[7][(int) (y - 1)] = (int) w;
+
                 break;
             case 9:
                 Xo9[(int) (y - 1)] = (int) w;
+           //     XN[8][(int) (y - 1)] = (int) w;
+
                 break;
         }
     }

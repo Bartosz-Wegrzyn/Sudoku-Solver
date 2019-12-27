@@ -33,6 +33,14 @@ public class Math {
         thirdDigit = thirdDigit-(x*100)-(y*10);
         int w=thirdDigit;
         return w;
-
     }
+
+//    static int Numer_tablicy_to_xyw(int Numer_tablicy)
+//    {
+//
+//
+//    }
+
+
+
 }
