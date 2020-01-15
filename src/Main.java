@@ -18,26 +18,24 @@ public class Main {
             int m = menu.nextInt();
 
             switch (m) {
-                case 1: Tab.CustomXYW(); Testy.dzialaj(1); break;
-
-
+                case 1: instrukcja(); Tab.CustomXYW(); Testy.uzupelniaj();break;
                 case 2:
                     System.out.println("Tablica 1:");
                     Tab.PreLoadedXYW(1);
                     System.out.println("Tablica");
-                    Tab.PrintTab_from_Xno();
-                    Tab.ClearTab();
+                    Tab.Print_sudoku();
+                    Tab.wyczysc_sudoku();
 
                     System.out.println("Tablica 2:");
                     Tab.PreLoadedXYW(2);
                     System.out.println("Tablica");
-                    Tab.PrintTab_from_Xno();
-                    Tab.ClearTab();
+                    Tab.Print_sudoku();
+                    Tab.wyczysc_sudoku();
 
                     System.out.println("Tablica 3:");
                     Tab.PreLoadedXYW(3);
-                    Tab.PrintTab_from_Xno();
-                    Tab.ClearTab();
+                    Tab.Print_sudoku();
+                    Tab.wyczysc_sudoku();
 
                     System.out.println("Wybież tablice 1, 2 lub 3:");
 
@@ -49,27 +47,27 @@ public class Main {
                             case 1:
                                 Tab.PreLoadedXYW(1);
                                 System.out.println("Tablica");
-                                Tab.PrintTab_from_Xno();
-                                Testy.dzialaj(0);
+                                Tab.wyczysc_sudoku();
+                                Testy.uzupelniaj();
                                 System.out.println("Rozwiązanie:");
 
-                                Tab.PrintTab_from_Xno();
+                                Tab.Print_sudoku();
                                 continue Menu;
                             case 2:
                                 Tab.PreLoadedXYW(2);
                                 System.out.println("Tablica");
-                                Tab.PrintTab_from_Xno();
+                                Tab.Print_sudoku();
                                 System.out.println("Rozwiązanie:");
-                                Testy.dzialaj(1);
-                                Tab.PrintTab_from_Xno();
+                                Testy.uzupelniaj();
+                                Tab.Print_sudoku();
                                 continue Menu;
                             case 3:
                                 Tab.PreLoadedXYW(3);
                                 System.out.println("Tablica");
-                                Tab.PrintTab_from_Xno();
-                                Testy.dzialaj(1);
+                                Tab.Print_sudoku();
+                                Testy.uzupelniaj();
                                 System.out.println("Rozwiązanie:");
-                                Tab.PrintTab_from_Xno();
+                                Tab.Print_sudoku();
                                 continue Menu;
 
                         }
@@ -78,17 +76,17 @@ public class Main {
                     case 3: break Menu;
             }
 
-            Tab.PrintTab_from_Xno();
+            Tab.Print_sudoku();
 
         }
-////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
     }
 
 
-    public static void Start_Custom() throws InterruptedException {
+    private static void instrukcja() throws InterruptedException {
 
         System.out.println("Program domyślnie ma ustawione wszystkie wartości na 0");
-        Tab.PrintTab_from_Xno();
+       new Tab();
         TimeUnit.SECONDS.sleep(2);
 
 
@@ -98,10 +96,10 @@ public class Main {
         //TimeUnit.SECONDS.sleep(2);
         System.out.println("Przykładowo 123:");
        // TimeUnit.SECONDS.sleep(2);
-        Tab.X2o[1] = 3;
-        Tab.PrintTab_from_Xno();
+        Tab.sudoku[0][1] = 3;
+        Tab.Print_sudoku();
         TimeUnit.SECONDS.sleep(2);
-        Tab.ClearTab();
+        Tab.wyczysc_sudoku();
 
     }
 }

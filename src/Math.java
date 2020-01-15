@@ -1,46 +1,31 @@
-public class Math {
+class Math {
 
     //Ustawia wartość x na tą samą co pierwsza cyfre zmiennej xyw
-    static int xyw_To_x(int number){
-        int firstDigit = number;
+    static int xyw_To_x(int xyw){
+        int firstDigit = xyw;
         firstDigit = firstDigit / 100;
         if (firstDigit == 0) {firstDigit =1; }
         if (firstDigit == 10) {firstDigit =0; }
-        int x = firstDigit;
-        return x;
-        
+        return firstDigit;
     }
-//Ustawia wartość y na tą samą co druga cyfra zmiennej xyw
 
+    //Ustawia wartość y na tą samą co druga cyfra zmiennej xyw
     static int xyw_To_y(int number){
 
-       int x = xyw_To_x(number);
-        
+        int x = xyw_To_x(number);
         int secondDigit = number;
         secondDigit = secondDigit-(x*100) ;
         secondDigit = secondDigit/10 ;
-
         if (secondDigit == 0) {secondDigit =1; }
         if (secondDigit == 10) {secondDigit =0; }
-        int  y = secondDigit;
-        return y;
+        return secondDigit;
     }
-    //    Ustawia wartość y na tą samą co druga cyfra zmiennej xyw
+    //Ustawia wartość w na tą samą co druga cyfra zmiennej xyw
     static int xyw_To_w(int number){
         int x = xyw_To_x(number);
         int y = xyw_To_y(number);
-        int thirdDigit = (int) number;
+        int thirdDigit = number;
         thirdDigit = thirdDigit-(x*100)-(y*10);
-        int w=thirdDigit;
-        return w;
+        return thirdDigit;
     }
-
-//    static int Numer_tablicy_to_xyw(int Numer_tablicy)
-//    {
-//
-//
-//    }
-
-
-
 }
