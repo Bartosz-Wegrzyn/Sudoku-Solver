@@ -7,29 +7,19 @@ import numpy as np
 def checkArray(sudoku):
     row_dic = {}
     col_dic = {}
+    field_dic = {}
+    reshaped = sudoku.reshape(3, 3, 3, 3)
 
     for i in range(9):
         col_dic[f"Col_{i}"] = dict(Counter(sudoku[:, i]))
         row_dic[f"Row_{i}"] = dict(Counter(sudoku[i, :]))
-
-    field_dic = {
-        "Field_0": dict(Counter(list(sudoku[:3, :3].flat))),
-        "Field_1": dict(Counter(list(sudoku[:3, 3:6].flat))),
-        "Field_2": dict(Counter(list(sudoku[:3, 6:].flat))),
-        "Field_3": dict(Counter(list(sudoku[3:6, :3].flat))),
-        "Field_4": dict(Counter(list(sudoku[3:6, 3:6].flat))),
-        "Field_5": dict(Counter(list(sudoku[3:6, 6:].flat))),
-        "Field_6": dict(Counter(list(sudoku[6:, :3].flat))),
-        "Field_7": dict(Counter(list(sudoku[6:, 3:6].flat))),
-        "Field_8": dict(Counter(list(sudoku[6:, 6:].flat)))
-
-    }
+        field_dic[f"Field{i}"] = dict(Counter(list(reshaped[(i // 3), :, i % 3, :].reshape(9).flat)))
 
     fieldTest = checkDic(field_dic)
     rowTest = checkDic(row_dic)
     colTest = checkDic(col_dic)
 
-    if fieldTest == False or rowTest == False or colTest == False:
+    if fieldTest is False or rowTest is False or colTest is False:
         return False
     else:
         return True
@@ -42,9 +32,6 @@ def checkDic(x_dic):
                 if x_dic[row][element] > 1:
                     return False
     return True
-
-
-# sudoku[1][8] = 2
 
 
 def simpleBot(sudoku):
@@ -60,6 +47,8 @@ def simpleBot(sudoku):
                         if checkArray(sudoku) is True:  # Test Pass
                             last_guess = guess
                             possibilities += 1
+                            if possibilities > 1:
+                                break
                     if possibilities == 1:
                         sudoku[row][col] = last_guess
                     else:
@@ -67,9 +56,38 @@ def simpleBot(sudoku):
         if np.array_equal(sudoku, sudoku_copy):
             return sudoku
 
-if __name__ == "__main__":
-    # 0 - undone
-    # 1 - done
-    # 2 - done
-    print(simpleBot(Tab.Sudoku(3)))
 
+if __name__ == "__main__":
+
+    Pass = 0
+    Fails = 0
+    import csv
+
+    with open('sudoku.csv', newline='') as csvfile:
+        spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+
+        for row in spamreader:
+                curent_sudoku = ', '.join(row).split(",")[0]
+                excepted_output = ', '.join(row).split(",")[1]
+
+                try:
+                    curent_sudoku = [int(char) for char in curent_sudoku]
+                    excepted_output = [int(char) for char in excepted_output]
+                    curent_sudoku = np.array(curent_sudoku).reshape((9, 9))
+                    excepted_output = np.array(excepted_output).reshape((9, 9))
+
+                    out = simpleBot(curent_sudoku)
+
+                    if np.array_equal(out, excepted_output):
+                        Pass += 1
+                        print("Pass: ", Pass)
+                        print("Fails: ", Fails)
+
+
+                    else:
+                        Fails += 1
+                        print("Fails: ", Fails)
+                        print(curent_sudoku)
+
+                except:
+                    pass

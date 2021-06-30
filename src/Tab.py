@@ -16,7 +16,7 @@ PreLoadedXYW = [
     # PreLoadedXYW  # 1
     [
         1, 5, 0, 0, 4, 2, 0, 0, 6,
-        2, 7, 4, 5, 6, 0, 0, 1, 0, #1,8 ->9
+        2, 7, 4, 5, 6, 0, 0, 1, 0,
         0, 0, 6, 1, 0, 7, 4, 0, 2,
         0, 1, 8, 0, 0, 0, 5, 4, 0,
         0, 0, 3, 0, 5, 0, 0, 0, 0,
@@ -25,6 +25,7 @@ PreLoadedXYW = [
         9, 8, 5, 0, 3, 0, 0, 6, 0,
         0, 4, 0, 2, 1, 9, 8, 3, 0, ],
 
+    # PreLoadedXYW  # 2
     [
         1, 2, 3, 4, 5, 6, 7, 8, 0,
         0, 0, 0, 0, 0, 0, 0, 1, 0,
@@ -35,7 +36,7 @@ PreLoadedXYW = [
         0, 0, 6, 0, 0, 0, 0, 0, 0,
         0, 7, 0, 0, 0, 0, 0, 0, 0,
         8, 0, 0, 0, 0, 0, 0, 0, 0,
-        ],
+    ],
 
     # PreLoadedXYW  # 3
     [
@@ -50,7 +51,5 @@ PreLoadedXYW = [
         7, 5, 0, 0, 0, 0, 0, 9, 6, ]]
 
 
-
-
 def Sudoku(list_num):
-    return np.array(PreLoadedXYW[list_num]).reshape((9,9))
+    return np.array(PreLoadedXYW[list_num]).reshape((9, 9))
