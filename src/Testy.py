@@ -67,14 +67,15 @@ if __name__ == "__main__":
         spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
 
         for row in spamreader:
+                # input()
                 curent_sudoku = ', '.join(row).split(",")[0]
                 excepted_output = ', '.join(row).split(",")[1]
-
                 try:
                     curent_sudoku = [int(char) for char in curent_sudoku]
                     excepted_output = [int(char) for char in excepted_output]
                     curent_sudoku = np.array(curent_sudoku).reshape((9, 9))
                     excepted_output = np.array(excepted_output).reshape((9, 9))
+                    print(curent_sudoku)
 
                     out = simpleBot(curent_sudoku)
 
@@ -82,6 +83,7 @@ if __name__ == "__main__":
                         Pass += 1
                         print("Pass: ", Pass)
                         print("Fails: ", Fails)
+                        print(curent_sudoku)
 
 
                     else:
